@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style></style>
+    <script src="https://kit.fontawesome.com/af7aa32ceb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/rightSide.css" />
+    <link rel="stylesheet" href="./styles/form.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Suivi des dépenses</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- start -->
+
+      <div class="leftSide">
+        <h1>Formulaire de transaction</h1>
+        <form id="form">
+          <div class="form-control">
+            <label for="text">Nom</label>
+            <div class="inputGroup">
+              <i id="nameIcon"></i>
+              <input type="text" id="name" placeholder="tapez le nom..." />
+            </div>
+          </div>
+          <div class="form-control">
+            <label for="amount">Montant (- dépenses, + revenus)</label>
+            <div class="inputGroup">
+              <i id="amountIcon"></i>
+              <input type="number" id="amount" placeholder="tapez le montant..." />
+            </div>
+          </div>
+          <button class="btn" type="submit">Ajouter</button>
+        </form>
+      </div>
+
+      <div class="rightSide">
+        <div class="balanceContainer">
+          <h4>VOTRE SOLDE</h4>
+          <h1 id="balance">€0.00</h1>
+        </div>
+
+        <div class="inc-exp-container">
+          <div>
+            <h4>Revenu</h4>
+            <p id="money-plus" class="money plus">+€0.00</p>
+          </div>
+          <div>
+            <h4>Dépense</h4>
+            <p id="money-minus" class="money minus">-€0.00</p>
+          </div>
+        </div>
+
+        <h3>Historique</h3>
+        <ul id="list" class="list"></ul>
+      </div>
+      <!-- end -->
+    </div>
+
+    <!-- scripts -->
+    <script src="./build/models/transaction.js"></script>
+    <script src="./build/utils/money.js"></script>
+    <script src="./build/dynamicStyle.js"></script>
+    <script src="./build/script.js"></script>
+  </body>
+</html>

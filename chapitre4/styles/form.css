@@ -1,0 +1,34 @@
+.inputGroup {
+    position: relative;
+    display: table;
+    width: 100%;
+}
+
+.inputGroup i {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    opacity: 0;
+}
+
+input[type='text'],
+input[type='number'] {
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    padding-right: 25px;
+}
+
+input[type='number'] {
+    width: 100%;
+    padding-right: 35px;
+}
+
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}

@@ -4,9 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>tutoJS/TS</title>
+    <style></style>
+    <script src="https://kit.fontawesome.com/af7aa32ceb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/form.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Suivi des dépenses</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Formulaire de transaction</h1>
+      <form id="form">
+        <div class="form-control">
+          <label for="text">Nom</label>
+          <div class="inputGroup">
+            <i id="nameIcon"></i>
+            <input type="text" id="name" placeholder="tapez le nom..." />
+          </div>
+        </div>
+        <div class="form-control">
+          <label for="amount">Montant (- dépenses, + revenus)</label>
+          <div class="inputGroup">
+            <i id="amountIcon"></i>
+            <input type="number" id="amount" placeholder="tapez le montant..." />
+          </div>
+        </div>
+        <button class="btn" type="submit">Ajouter</button>
+      </form>
+    </div>
+
+    <!-- scripts -->
+    <script src="./models/transaction.js"></script>
+    <script src="dynamicStyle.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

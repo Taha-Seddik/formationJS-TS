@@ -26,7 +26,7 @@ function createTransaction(name, amount) {
 
 var transactions = [];
 function addTransaction(event) {
-  var transaction = createTransaction(generateTaskName(), generateAmount());
+  var transaction = createTransaction("fclxdmf", 3555);
   transactions.push(transaction);
   console.log(transactions);
 }
@@ -34,7 +34,9 @@ function addTransaction(event) {
 const addTransactionBtn = document.getElementById("addTransactionBtn");
 addTransactionBtn.addEventListener("click", addTransaction);
 
-const listnerDestroyerBtn = document.getElementById("listnerDestroyerBtn");
-listnerDestroyerBtn.addEventListener("click", function (e) {
+function destroyEventListner(event) {
   addTransactionBtn.removeEventListener("click", addTransaction);
-});
+}
+
+const listnerDestroyerBtn = document.getElementById("listnerDestroyerBtn");
+listnerDestroyerBtn.addEventListener("click", destroyEventListner);

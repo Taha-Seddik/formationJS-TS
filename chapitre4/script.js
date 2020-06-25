@@ -15,6 +15,7 @@ function addTransaction(e) {
   // preventDefault to prevent the default form action for Ajax form submissions
   e.preventDefault();
 
+  // dynamic styling by situation
   if (nameInput.value.trim() === "") {
     handleInputStyling(true, nameInput, nameIcon);
   } else {

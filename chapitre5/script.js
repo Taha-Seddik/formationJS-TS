@@ -21,6 +21,7 @@ function addTransaction(e) {
   // preventDefault to prevent the default form action for Ajax form submissions
   e.preventDefault();
 
+  // handle styling
   if (nameInput.value.trim() === "") {
     handleInputStyling(true, nameInput, nameIcon);
   } else {
@@ -38,8 +39,10 @@ function addTransaction(e) {
     var transaction = createTransaction(nameInput.value, amountInput.value);
     transactions.push(transaction);
 
-    // New
+    // add transaction to UI in history lint
     addTransactionToHistory(transaction);
+
+    // update amount in UI
     updateValues();
 
     // clear inputs
@@ -58,9 +61,7 @@ function addTransactionToHistory(transaction) {
   item.classList.add(transaction.getAmount() < 0 ? "minus" : "plus");
 
   item.innerHTML = `
-    ${transaction.getName()} <span>${sign}${Math.abs(
-    transaction.getAmount()
-  )}</span> <button class="delete-btn" onclick="removeTransaction(${transaction.getId()})">x</button>
+    ${transaction.getName()} <span>${sign}${Math.abs(transaction.getAmount())}</span> 
   `;
 
   list.appendChild(item);

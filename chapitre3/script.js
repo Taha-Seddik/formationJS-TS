@@ -27,6 +27,6 @@ function addTransaction(e) {
 }
 
 // Preuve de rechargement si on fait pas prevent default
-// console.log("j'été chargé une autre fois");
+console.log("j'été chargé une autre fois");
 
 form.addEventListener("submit", addTransaction);

@@ -1,4 +1,7 @@
-export function handleInputStyling(error, inputDomRef, iconDomRef) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.handleInputStyling = void 0;
+function handleInputStyling(error, inputDomRef, iconDomRef) {
     if (error) {
         inputDomRef.style.border = "1px solid red";
         iconDomRef.className += "fas fa-times";
@@ -12,4 +15,5 @@ export function handleInputStyling(error, inputDomRef, iconDomRef) {
         iconDomRef.style.opacity = "1";
     }
 }
+exports.handleInputStyling = handleInputStyling;
 //# sourceMappingURL=dynamicStyle.js.map

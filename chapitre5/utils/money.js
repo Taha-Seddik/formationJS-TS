@@ -14,9 +14,13 @@ function getTotal(valuesArray) {
   });
   return total;
 }
-
+//(item) => item > 0)
 function getIncome(amountsArray) {
-  return getTotal(amountsArray.filter((item) => item > 0));
+  const filtredArray = amountsArray.filter(function (item) {
+    if (item > 0) return true;
+    else return false;
+  });
+  return getTotal(filtredArray);
 }
 
 function getExpense(amountsArray) {

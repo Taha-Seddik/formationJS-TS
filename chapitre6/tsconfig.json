@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "module": "es6",
-    "target": "es5",
-    "outDir": "./build/",
+    "module": "commonjs", // add this
+    "target": "es6", // and this
+    "outDir": "./dist/",
     "sourceMap": true,
-    "moduleResolution": "Node"
+    "moduleResolution": "node"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

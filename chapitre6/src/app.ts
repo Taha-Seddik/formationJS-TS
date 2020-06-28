@@ -1,6 +1,6 @@
-import { Transaction } from "./models/transaction";
-import { handleInputStyling } from "./dynamicStyle";
-import { getAmountsArray, getTotal, getIncome, getExpense } from "./utils/money";
+import { handleInputStyling } from "./dynamic-style.js";
+import { Transaction } from "./models/transaction.js";
+import { getAmountsArray, getTotal, getIncome, getExpense } from "./utils/money.js";
 
 var transactions: Transaction[] = [];
 

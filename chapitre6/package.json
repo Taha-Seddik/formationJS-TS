@@ -2,7 +2,7 @@
   "name": "chapitre6",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/script.js",
+  "main": "app.js",
   "scripts": {
     "start": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
